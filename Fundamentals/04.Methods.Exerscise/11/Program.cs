@@ -7,39 +7,23 @@ int[] arr = Console.ReadLine()
 string[] command = new string[0];
 while ((command = Console.ReadLine()
         .Split()
-        .ToArray())[1] != "end")
+        .ToArray())[0] != "end")
 {
     if (command[0] == "exchange")
     {
         int index = int.Parse(command[1]);
-        if (index > arr.Length-1)
+        if (index > arr.Length - 1)
         {
             Console.WriteLine("Invalid index");
+            continue;
         }
-        ExchangeMethod(arr, index);
+        arr = ExchangeMethod(arr, index);
 
     }
     else if (command[0] == "max")
     {
-        if (command[1] == "even")
-        {
+        MethodForMax(arr, command);
 
-        }
-        else
-        {
-
-        }
-    }
-    else if (command[0] == "min")
-    {
-        if (command[1] == "even")
-        {
-
-        }
-        else
-        {
-
-        }
     }
     else if ((command[0] == "first"))
     {
@@ -54,14 +38,17 @@ while ((command = Console.ReadLine()
         string evenOrOdd = command[2];
         MethodForSecond(arr, numberOfElements, evenOrOdd);
     }
+    else MethodForMin(arr, command);
+
 
 }
+Console.WriteLine($"[{string.Join(", ", arr)}]");
 
 static void MethodForFirst(int[] arr, int numberOfElements, string evenOrOdd)
 {
     int counter = 0;
     int[] arrayOfNumbers = new int[numberOfElements];
-    if (numberOfElements > arr.Length)
+    if (numberOfElements >= arr.Length || numberOfElements < 0)
     {
         Console.WriteLine("Invalid count");
         return;
@@ -141,7 +128,7 @@ static void MethodForSecond(int[] arr, int numberOfElements, string evenOrOdd)
         Console.WriteLine($"[{string.Join(", ", arrayForSecondCase)}]");
 }
 
-static void ExchangeMethod(int[] arr, int index)
+static int[] ExchangeMethod(int[] arr, int index)
 {
     int[] changedArr = new int[arr.Length];
     int counter = 0;
@@ -155,5 +142,55 @@ static void ExchangeMethod(int[] arr, int index)
         changedArr[counter] = arr[i];
         counter++;
     }
-    Console.WriteLine($"[{string.Join(", ", changedArr)}]");
+    return changedArr;
+}
+
+static void MethodForMax(int[] arr, string[] command)
+{
+    int MaxIndex = -1;
+    int maxNumber = int.MinValue;
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (command[1] == "even" && arr[i] % 2 == 0 ||
+            command[1] == "odd" && arr[i] % 2 != 0)
+        {
+            if (arr[i] >= maxNumber)
+            {
+                maxNumber = arr[i];
+                MaxIndex = i;
+            }
+        }
+
+    }
+    if (MaxIndex > -1)
+        Console.WriteLine(MaxIndex);
+    else Console.WriteLine("No matches");
+}
+
+static void MethodForMin(int[] arr, string[] command)
+{
+    if (command[0] == "min")
+    {
+        int minIndex = -1;
+        int minNumber = int.MaxValue;
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (command[1] == "even" && arr[i] % 2 == 0 ||
+                command[1] == "odd" && arr[i] % 2 != 0)
+            {
+                if (arr[i] <= minNumber)
+                {
+                    minNumber = arr[i];
+                    minIndex = i;
+                }
+            }
+
+        }
+        if (minIndex > -1)
+            Console.WriteLine(minIndex);
+        else Console.WriteLine("No matches");
+    }
+    
 }
