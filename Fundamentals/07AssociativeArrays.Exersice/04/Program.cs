@@ -40,3 +40,4 @@ foreach (var VARIABLE in myMap)
 {
     Console.WriteLine($"{VARIABLE.Key} => {VARIABLE.Value}");
 }
+
