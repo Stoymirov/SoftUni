@@ -30,13 +30,19 @@ while ((command = Console.ReadLine()) != "Once upon a time")
     }
 }
 
-foreach(var VARIABLE in myDictionary.OrderByDescending(x => x.Value.Count))
+
+var sortedDwarfs = myDictionary
+    .OrderByDescending(pair => pair.Value.Values.Max(dwarf => dwarf.Physics))
+    .ThenByDescending(pair => pair.Value.Count)
+    .SelectMany(pair => pair.Value.Values
+        .OrderByDescending(dwarf => dwarf.Physics)
+        .Select(dwarf => $"({pair.Key}) {dwarf.Name} <-> {dwarf.Physics}"));
+
+foreach (var dwarf in sortedDwarfs)
 {
-    foreach (var VARIABLE2 in VARIABLE.Value.Values.OrderByDescending(x => x.Physics).ThenBy(x => VARIABLE.Value.Count))
-    {
-        Console.WriteLine($"({VARIABLE.Key}) {VARIABLE2.Name} <-> {VARIABLE2.Physics}");
-    }
+    Console.WriteLine(dwarf);
 }
+
 
 
 
