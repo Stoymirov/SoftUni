@@ -11,7 +11,7 @@ InstructionMethod(turn);//tells the player what to do
 
 while (counterOfPlays < 9 )
 {
-    if(CheckForWin(array))
+    if(CheckForWin(array,turn))
     {
         return;
     }
@@ -115,11 +115,11 @@ static bool CheckForValid(string input)
 
 }
 
-static bool CheckForWin(string[] array)
+static bool CheckForWin(string[] array, int turn)
 {
     if (array[0] == array[1] && array[2] == array[1] || array[3] == array[4] && array[5] == array[4] || array[6] == array[7] && array[8] == array[7])
     {
-        if (array[0] == "X")
+        if (turn == 2) 
         {
             Console.WriteLine("Player one wins!");
         }
@@ -130,7 +130,7 @@ static bool CheckForWin(string[] array)
     else if (array[0] == array[3] && array[3] == array[6] || array[1] == array[4] && array[4] == array[7] ||
              array[2] == array[5] && array[5] == array[8])
     {
-        if (array[0] == "X")
+        if (turn == 2) 
         {
             Console.WriteLine("Player one wins!");
         }
@@ -139,7 +139,7 @@ static bool CheckForWin(string[] array)
     }
     else if (array[0] == array[4] && array[4] == array[8] || array[2] == array[4] && array[4] == array[6])
     {
-        if (array[0] == "X")
+        if (turn == 2) 
         {
             Console.WriteLine("Player one wins!");
         }
