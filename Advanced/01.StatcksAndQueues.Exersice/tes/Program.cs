@@ -1,0 +1,1 @@
+﻿bool isNumber = int.TryParse("12", out _);
