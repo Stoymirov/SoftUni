@@ -27,6 +27,7 @@ class Program
                 ExchangeZ(rows, cols, matrix);
                 MatrixPrint(matrix, rows, cols);
                 Console.WriteLine($"dead: {playerIndexRow} {playerIndexCol}");
+                return;
             };
         }
 
