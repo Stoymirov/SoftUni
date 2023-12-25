@@ -1,4 +1,4 @@
-﻿int[] input = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select((x) => int.Parse(x)).ToArray();
+﻿List<int> input = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select((x) => int.Parse(x)).ToArray();
 int lowerEnd = input[0];
 int higherEnd = input[1];
 string type = Console.ReadLine();

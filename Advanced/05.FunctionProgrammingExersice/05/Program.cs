@@ -1,9 +1,9 @@
-﻿int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
+﻿List<int> input = Console.ReadLine().Split().Select(int.Parse).ToArray();
 string command= "";
 
 
-Action<int[]> printer = p => Console.WriteLine(string.Join(" ",p));
-Func<int[],string, int[]> func = (array,st) =>
+Action<List<int>> printer = p => Console.WriteLine(string.Join(" ",p));
+Func<List<int>,string, List<int>> func = (array,st) =>
 {
     switch (st)
     {
