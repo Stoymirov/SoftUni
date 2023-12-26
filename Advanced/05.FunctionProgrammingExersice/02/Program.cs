@@ -1,6 +1,6 @@
-﻿string[] input = Console.ReadLine().Split(" ",StringSplitOptions.RemoveEmptyEntries);
+﻿List<string> input = Console.ReadLine().Split(" ",StringSplitOptions.RemoveEmptyEntries);
 
-Action<string[],string> writer = (s,title)=>
+Action<List<string>,string> writer = (s,title)=>
 {
     foreach (var s1 in s)
     {
