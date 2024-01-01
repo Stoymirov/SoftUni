@@ -59,6 +59,14 @@ namespace CustomListAlone
 
             Count++;
         }
+
+        public void Add(int[] items)
+        {
+            foreach (var item in items)
+            {
+                Add(item);
+            }
+        }
         public int RemoveAt(int index)
         {
             ValidateIndex(index);
