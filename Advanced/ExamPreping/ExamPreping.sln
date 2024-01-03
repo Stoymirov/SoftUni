@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamPreping", "ExamPreping\ExamPreping.csproj", "{5A06DCC0-BCA6-412E-AC9C-0C91B395A558}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "new", "new\new.csproj", "{8BABC454-64E1-4E67-BB92-EAF74FB375ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "epanesho", "epanesho\epanesho.csproj", "{7B1BDFA6-C829-4464-A295-19786E0BB776}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A06DCC0-BCA6-412E-AC9C-0C91B395A558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A06DCC0-BCA6-412E-AC9C-0C91B395A558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A06DCC0-BCA6-412E-AC9C-0C91B395A558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A06DCC0-BCA6-412E-AC9C-0C91B395A558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BABC454-64E1-4E67-BB92-EAF74FB375ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BABC454-64E1-4E67-BB92-EAF74FB375ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BABC454-64E1-4E67-BB92-EAF74FB375ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BABC454-64E1-4E67-BB92-EAF74FB375ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B1BDFA6-C829-4464-A295-19786E0BB776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B1BDFA6-C829-4464-A295-19786E0BB776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B1BDFA6-C829-4464-A295-19786E0BB776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B1BDFA6-C829-4464-A295-19786E0BB776}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DEED426-C183-4CD1-A7F9-652CF4DC71B2}
+	EndGlobalSection
+EndGlobal
