@@ -2,11 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using ListyIterator;
+using Collection;
 
 List<string> items = Console.ReadLine().Split().Skip(1).ToList();
 Console.WriteLine();
-ListyIterator<string> listyIterator = new(items);
+Collection<string> listyIterator = new(items);
 string command = "";
 while ((command = Console.ReadLine()) != "END")
 {
@@ -31,7 +31,7 @@ while ((command = Console.ReadLine()) != "END")
         case "PrintAll":
             foreach (var item in listyIterator)
             {
-                Console.WriteLine($"{item} ");
+                Console.Write($"{item} ");
             }
 
             break;

@@ -6,14 +6,14 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListyIterator
+namespace Collection
 {
-    public class ListyIterator<T>:IEnumerable<T>
+    public class Collection<T>:IEnumerable<T>
     {
         private int index;
         private List<T> _items;
 
-        public ListyIterator(List<T> items)
+        public Collection(List<T> items)
         {
             _items = items;
         }
@@ -49,11 +49,10 @@ namespace ListyIterator
 
         public IEnumerator<T> GetEnumerator()
         {
-            return _items.GetEnumerator();
-            //foreach (var item in _items)
-            //{
-            //    yield return item;
-            //}
+            foreach (var item in _items)
+            {
+                yield return item;
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
