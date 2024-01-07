@@ -19,7 +19,7 @@ namespace PlayersAndMonsters
 
         public override string ToString()
         {
-            return $"Type: {this.GetType().Name} Username: {this.Username} Level: {this.Level}";
+            return $"Type: {this.GetType().Name} Username: {this.Username} Level : {this.Level}";
         } 
     }
 }
