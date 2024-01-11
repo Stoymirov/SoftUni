@@ -1,3 +1,9 @@
- Tova e pyrvi red
-tova e vtori
-treti
+11010010
+XOR
+11100100
+
+
+00110110
+XOR
+11100100
+11010010
