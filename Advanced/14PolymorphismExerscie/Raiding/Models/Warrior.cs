@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace Raiding.Models
 {
-    public class Druid : BaseHero
+    public class Warrior:BaseHero
     {
-        private const int DruidPower = 80;
-        public Druid(string name) : base(name, DruidPower)
+        private const int WarriorPower = 100;
+        public Warrior(string name) : base(name, WarriorPower)
         {
         }
 
-        
         public override string CastAbility()
         {
-            return $"{this.GetType().Name} - {Name} healed for {Power}";
+            return $"{this.GetType().Name} - {Name} hit for {Power} damage";
         }
     }
 }

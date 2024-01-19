@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Raiding.Models
 {
-    public class Druid : BaseHero
+    public class Paladin:BaseHero
     {
-        private const int DruidPower = 80;
-        public Druid(string name) : base(name, DruidPower)
+        private const int PaladinPower = 100;
+        public Paladin(string name) : base(name,PaladinPower)
         {
         }
-
         
         public override string CastAbility()
         {

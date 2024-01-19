@@ -5,9 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1", "1\1.csproj", "{263106EE-7855-44DF-A420-078EA6D003A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raiding", "Raiding\Raiding.csproj", "{8605A986-0789-4D75-8A00-AA701B7637DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Raiding", "Raiding\Raiding.csproj", "{8605A986-0789-4D75-8A00-AA701B7637DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildFarm", "WildFarm\WildFarm.csproj", "{1AEA95EA-16C9-4004-ADD6-C1967663D516}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Farm(notWorking)", "WildFarm\Farm(notWorking).csproj", "{1AEA95EA-16C9-4004-ADD6-C1967663D516}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
