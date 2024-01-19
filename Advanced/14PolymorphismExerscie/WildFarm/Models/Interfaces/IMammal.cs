@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WildFarm.IO.Interfaces
+namespace WildFarm.Models.Interfaces
 {
-    public interface IWriter
+    public interface IMammal
     {
-        void WriteLine(string str);
+        string LivingRegion { get; }
     }
 }

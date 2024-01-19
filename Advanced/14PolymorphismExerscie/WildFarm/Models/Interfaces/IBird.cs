@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WildFarm.IO.Interfaces
+namespace WildFarm.Models.Interfaces
 {
-    public interface IWriter
+    public interface IBird
     {
-        void WriteLine(string str);
+        double WingSize { get; }
     }
 }

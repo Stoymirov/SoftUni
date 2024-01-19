@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using WildFarm.IO.Interfaces;
 
-
 namespace WildFarm.IO
 {
     public class FileWriter:IWriter

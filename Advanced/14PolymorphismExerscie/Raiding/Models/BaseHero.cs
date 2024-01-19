@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Raiding.Models
 {
-    internal class BaseHero
+    public abstract class BaseHero
     {
+        public abstract string Name { get;protected set; }
+        public abstract int Power  { get;protected set; }
+
+        public abstract string CastAbility();
+
+
     }
+
 }

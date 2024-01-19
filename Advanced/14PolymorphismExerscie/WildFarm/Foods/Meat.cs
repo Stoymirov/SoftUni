@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WildFarm.IO.Interfaces
+namespace WildFarm.Foods
 {
-    public interface IWriter
+    public class Meat:Food
     {
-        void WriteLine(string str);
+        public Meat(int quantity) : base(quantity)
+        {
+        }
     }
 }

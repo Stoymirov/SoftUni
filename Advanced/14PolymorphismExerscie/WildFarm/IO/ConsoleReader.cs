@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WildFarm.IO;
 using WildFarm.IO.Interfaces;
-
 
 namespace WildFarm.IO
 {
-    public class FileWriter:IWriter
+    public class ConsoleReader : IReader
     {
-        public void WriteLine(string str)
+        public string ReadLine()
         {
-            using StreamWriter writer = new("../../../test.txt", true);
-            writer.WriteLine(str);
+            return Console.ReadLine();
         }
     }
+
 }
